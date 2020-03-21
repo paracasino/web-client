@@ -1,44 +1,95 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# Para Casino
 
-## Available Scripts
+Client application for _Para Casino_. An application mainly created for me to learn more about different technologies and such in a larger project.
 
-In the project directory, you can run:
+## Getting Started
 
-### `npm start`
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Prerequisites
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+You must have [NodeJs][nvm] and [npm][npm] installed (npm is installed with NodeJs).
 
-### `npm test`
+To get hot reloading working properly, you may have to [increase the amount of inotify watchers][increase-inotify-watchers].
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installing
 
-### `npm run build`
+To get up and running with the development environment, simply run:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```sh
+npm install
+npm start
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Whenever you want to start the project again, simply run `npm start`. The app will open itself in the browser on http://localhost:3000.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Running the tests
 
-### `npm run eject`
+End-to-end tests are run by running `npm run e2e-ci`. Unit tests are run by running `npm test`.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### End-to-end tests
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Cypress is used for end-to-end testing. Run the end to end tests in a browser by running:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```sh
+npm run e2e
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Or in headless mode (in the terminal) by running:
 
-## Learn More
+```sh
+npm run e2e-ci
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Unit tests
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+These tests are testing the modules in isolation, ensuring they keep working as expected provided the same input. Run the test by simply running:
+
+```sh
+npm test
+```
+
+## Deployment
+
+**TODO when deployment procedure is decided.**
+
+## Built With
+
+| Tool | Description |
+|:-----|:------------|
+| [TypeScript][typescript] | Language used. Superset of JavaScript for scalable development. |
+| [React][react] | Web framework/library used for creating view components. |
+| [Redux][redux] | Tool for managing the application's global state. |
+| [Cypress][cypress] | Tool for end-to-end testing of web applications. |
+
+## Contributing
+
+Please read [CONTRIBUTING.md][contributing] for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Versioning
+
+[SemVer][semver] is used for versioning. For the versions available, see the [tags on this repository][tags].
+
+## Authors
+
+* **Kenny Ek** - [GitHub][kennyek]
+
+See also the list of [contributors][contributors] who participated in this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE][license] file for details.
+
+[contributing]: CONTRIBUTING.md
+[contributors]: https://github.com/paracasino/web-client/contributors
+[cypress]: https://www.cypress.io/
+[increase-inotify-watchers]: https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers
+[kennyek]: https://github.com/kennyek/
+[license]: LICENSE
+[npm]: 
+[nvm]: https://github.com/nvm-sh/nvm
+[react]: https://reactjs.org/
+[redux]: https://redux.js.org/
+[semver]: http://semver.org/
+[tags]: https://github.com/paracasino/web-client/tags
+[typescript]: https://www.typescriptlang.org/
