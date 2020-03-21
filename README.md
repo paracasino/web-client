@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-You must have [NodeJs][nvm] and [npm][npm] installed (npm is installed with NodeJs).
+You must have [NodeJs][nvm] and [npm] installed (npm is installed with NodeJs).
 
 To get hot reloading working properly, you may have to [increase the amount of inotify watchers][increase-inotify-watchers].
 
@@ -86,8 +86,7 @@ This project is licensed under the MIT License - see the [LICENSE][license] file
 [increase-inotify-watchers]: https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers
 [kennyek]: https://github.com/kennyek/
 [license]: LICENSE
-[npm]: 
-[nvm]: https://github.com/nvm-sh/nvm
+[nvm]: https://github.com/nvm-sh/nvm/
 [react]: https://reactjs.org/
 [redux]: https://redux.js.org/
 [semver]: http://semver.org/
