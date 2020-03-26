@@ -1,12 +1,11 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { findIndex } from 'lodash';
 import { RootState } from 'state/store';
 
-interface FavoritesState {
+export interface FavoritesState {
   ids: string[];
 }
 
-const initialState: FavoritesState = {
+export const initialState: FavoritesState = {
   ids: [],
 };
 
@@ -18,9 +17,8 @@ export const slice = createSlice({
       state.ids.push(action.payload);
     },
     remove: (state, action: PayloadAction<string>) => {
-      const { ids } = state;
-      const id = findIndex(ids, action.payload);
-      ids.slice(id, id + 1);
+      const id = state.ids.findIndex(id => id === action.payload);
+      state.ids.splice(id, id + 1);
     },
     clear: state => {
       state.ids = [];
